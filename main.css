@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kelly Slab', cursive;
+    line-height: 1.5;
+}
+nav{
+    flex: 1;
+    text-align: right;
+    color:black;
+    background-color: rgba(255,255,255, 0.5);
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    
+}
+
+nav ul li{
+    display:inline-block;
+    margin-right:20px;
+    margin-top:-15px
+}
+a{
+    color:#000;
+}
+
+.title-text{
+    font-size: 40px;
+    text-align:center;
+}
+
+.header{
+    min-height: 100vh;
+    background-image: url('bg-dummy-01.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top:auto;
+}
+.hero{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width:100%;
+    height:100%;
+}
+.hero .title{
+    color:rgba(255,255,255,0.7);
+    font-size: 50px;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration:none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight:bold;
+    background: orange;
+    color:#fff;
+    cursor:pointer;
+    border:2px solid orange;
+    margin-top: 10px;
+}
+
+.hero-btn:hover{
+    background: #fff;
+    color:orange;
+    border:none;
+}
+
+.pulsate{
+    animation: pulsate 3s ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: .3;
+    color:#000;
+}
+@-webkit-keyframes pulsate{
+    0%{
+        opacity: .5;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:.5;
+    }
+
+}
+#about{
+    padding:5px;
+    
+
+}
+.about{
+    margin:30px 0px;
+    display: flex;
+    padding:40px;
+
+}
+.about-icon .fa{
+    font-size:60px;
+    color:orange;
+    margin-right:20px;
+}
+
+.about-subtitle{
+    text-transform:  capitalize;
+    color:orange;
+    font-size:25px;
+
+}
+.about-info{
+    margin-top:10px;
+    line-height:1.5;
+    text-align:center;
+}
+
+.about-icon:hover .fa, .about-subtitle:hover{
+    transition: transform 2s ease, color 2s ease;
+    transform: translateY(-5px);
+    color:#cd6100;
+    cursor: pointer;
+}
+@media screen and (min-width:576px){
+    .about-center{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .about{
+        flex: 0 0 cal(50% - 16px);
+    }
+}
+@media screen and (min-width:972px){
+    .about{
+        flex: 0 0 calc(50.3% - 16px);
+    }
+}
+
+.menu-image{
+    min-height:100vh;
+    background:url(bg-dummy-02.jpg)center/cover scroll no-repeat;
+}
+.menu-text{
+    min-height:30vh;
+    align-items:center;
+    background:orange;
+    columns:#000;
+    padding: 40px 0px;
+}
+.menu-text-center{
+    width:90%;
+    margin:0 auto;
+
+}
+
+.menu-text h1{
+    font-size:30px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+.menu-text p{
+    margin:20px 0;
+    line-height:2;
+
+}
+.menu-text a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding:13px 20px;
+    border-radius:200px;
+    font-weight:bold;
+    background:rgb(10,10,10);
+    color:orange;
+    cursor:pointer;
+    border: 2px solid #000;
+
+}
+.menu-text a:hover{
+    color:orange;
+    background:#fff;
+    border:none;
+}
+@media screen and (min-width:100vh){
+    .menu{
+        display:flex;
+    }
+    .menu-text{
+        flex: 0 0 30%;
+    }
+    .menu-image{
+        flex:0 0 70%;
+        clip-path: polygon(0 0,100% 0,70% 100%,0% 100%);
+    }
+    .menu{
+        background:orange;
+    }
+
+}
+#social-icons{
+    min-height:4vh;
+    background:#fff;
+    text-align:center;
+    padding:10px 0px;
+
+}
+#social-icons a{
+    display:inline-block;
+    padding:1px 10px;
+    margin: 0px 5px;
+    font-size:25px;
+    border-radius:5px;
+    transform: transform 2s ease, color 2s ease;
+}
+#social-icons a:hover{
+    transform: translateY(-10px);
+}
+.facebook{
+    color:#3b5998;
+}
+.twitter{
+    color:#38a1f3;
+}
+.instagram{
+    color:#e1306c;
+
+}
+.plus{
+    color:#db4a39;
+}
+
+.number{
+    min-height:100vh;
+    text-align: center;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)),url(pic34.jpg)center/cover fixed no-repeat;
+    padding:60px 0;
+    color:#fff;
+}
+.number p{
+    font-size:30px;
+    font-weight:bold;
+
+}
+.number:hover{
+    color:orange;
+}
+.number .fa{
+    font-size:60px;
+    margin:70px 0;
+}
+
+.number h3{
+    text-transform:uppercase;
+}
+
+@media screen and (min-width: 576px){
+    #numbers{
+        display : grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 992px){
+    #numbers{
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+}
